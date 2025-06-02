@@ -13,7 +13,6 @@ Resources:
       TemplateURL: "{{resolve:ssm:/sdlf/dataset/main}}"
       Parameters:
         pPipelineReference: !Ref pPipelineReference
-        pTeamName: engineering
         pS3Prefix: legislators
         pDeploymentInstance: dev
         pStorageDeploymentInstance: dev
