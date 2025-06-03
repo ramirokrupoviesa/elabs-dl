@@ -12,6 +12,7 @@ Resources:
     Properties:
       TemplateURL: "{{resolve:ssm:/sdlf/stagelambda/main}}"
       Parameters:
+        pTeamName: iot
         pPipelineReference: !Ref pPipelineReference
         pDeploymentInstance: mainA
         pStorageDeploymentInstance: dev
@@ -37,6 +38,7 @@ Resources:
     Properties:
       TemplateURL: "{{resolve:ssm:/sdlf/stageglue/main}}"
       Parameters:
+        pTeamName: iot
         pPipelineReference: !Ref pPipelineReference
         pDeploymentInstance: mainB
         pStorageDeploymentInstance: dev
