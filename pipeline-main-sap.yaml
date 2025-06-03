@@ -41,7 +41,7 @@ Resources:
         pDeploymentInstance: SAPB
         pStorageDeploymentInstance: dev
         pDatasetDeploymentInstance: dev
-        pGlueJobName: sdlf-mainB-glue-job
+        pGlueJobName: sdlf-SAPB-glue-job
         pGlueNumberOfWorkers: 10
         pGlueWorkerType: G.1X
         pTriggerType: schedule
