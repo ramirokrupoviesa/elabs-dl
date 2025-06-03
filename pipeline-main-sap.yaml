@@ -13,7 +13,7 @@ Resources:
       TemplateURL: "{{resolve:ssm:/sdlf/stagelambda/main}}"
       Parameters:
         pPipelineReference: !Ref pPipelineReference
-        pDeploymentInstance: SAP
+        pDeploymentInstance: SAPA
         pStorageDeploymentInstance: dev
         pDatasetDeploymentInstance: dev
         pTriggerType: event
@@ -38,7 +38,7 @@ Resources:
       TemplateURL: "{{resolve:ssm:/sdlf/stageglue/main}}"
       Parameters:
         pPipelineReference: !Ref pPipelineReference
-        pDeploymentInstance: SAP
+        pDeploymentInstance: SAPB
         pStorageDeploymentInstance: dev
         pDatasetDeploymentInstance: dev
         pGlueJobName: sdlf-mainB-glue-job
