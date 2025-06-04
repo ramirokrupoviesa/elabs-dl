@@ -15,7 +15,7 @@ Resources:
         pPipelineReference: !Ref pPipelineReference
         pDeploymentInstance: SAPA
         pStorageDeploymentInstance: dev
-        pDatasetDeploymentInstance: dev
+        pDatasetDeploymentInstance: segundo
         pTriggerType: event
         pEventPattern: >-
           {
@@ -26,7 +26,7 @@ Resources:
                 "name": ["{{resolve:ssm:/sdlf/storage/rRawBucket/dev}}"]
               },
               "object": {
-                "key": [{ "prefix": "legislators/" }]
+                "key": [{ "prefix": "segundo/" }]
               }
             }
           }
@@ -40,7 +40,7 @@ Resources:
         pPipelineReference: !Ref pPipelineReference
         pDeploymentInstance: SAPB
         pStorageDeploymentInstance: dev
-        pDatasetDeploymentInstance: dev
+        pDatasetDeploymentInstance: segundo
         pGlueJobName: sdlf-SAPB-glue-job
         pGlueNumberOfWorkers: 10
         pGlueWorkerType: G.1X
@@ -54,7 +54,7 @@ Resources:
                     "name": ["{{resolve:ssm:/sdlf/storage/rStageBucket/dev}}"]
                 },
                 "object": {
-                    "key": [{ "prefix": "legislators/mainA/" }]
+                    "key": [{ "prefix": "segundo/mainA/" }]
                 }
             }
           }
@@ -65,6 +65,6 @@ Resources:
             "--job-bookmark-option": "job-bookmark-enable",
             "--enable-metrics": "",
             "--enable-auto-scaling": "true",
-            "--SOURCE_LOCATION": !Sub "s3://{{resolve:ssm:/sdlf/storage/rStageBucket/dev}}/legislators/mainA",
-            "--OUTPUT_LOCATION": !Sub "s3://{{resolve:ssm:/sdlf/storage/rAnalyticsBucket/dev}}/legislators/mainB"
+            "--SOURCE_LOCATION": !Sub "s3://{{resolve:ssm:/sdlf/storage/rStageBucket/dev}}/segundo/mainA",
+            "--OUTPUT_LOCATION": !Sub "s3://{{resolve:ssm:/sdlf/storage/rAnalyticsBucket/dev}}/segundo/mainB"
           }
