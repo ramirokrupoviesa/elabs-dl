@@ -15,4 +15,4 @@ Resources:
         pPipelineReference: !Ref pPipelineReference
         pS3Prefix: segundo
         pDeploymentInstance: segundo
-        pStorageDeploymentInstance: segundo
+        pStorageDeploymentInstance: dev
